@@ -92,7 +92,7 @@
             
           </li>
           <li>
-            <a class="" href="Index.jsp">
+            <a class="" href="Mapa.jsp">
                           
                           <span>Mapa</span>
                       </a>
