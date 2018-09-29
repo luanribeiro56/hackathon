@@ -8,12 +8,6 @@
 <% 
     OcorrenciaDAO dao = new OcorrenciaDAO();
     List<Ocorrencia> lista;
-    
-    if(request.getParameter("txtFiltro") != null){
-        lista = dao.listar(request.getParameter("txtFiltro"));
-    }
-    
-    else{
         if(request.getParameter("bo") != null){
             Ocorrencia obj = dao.buscarPorChavePrimaria(Long.parseLong(request.getParameter("bo")));
                 if(obj != null){
@@ -22,13 +16,14 @@
         }
         
         lista = dao.listar();
-    }
+    
 %>
     <section id="main-content">
       <section class="wrapper">
         <!--overview start-->
         <div class="row">
           <div class="col-lg-12">
+              <h5 class="page-header" align="justify"> De acordo com Atlas da Violência, realizado pelo Instituto de Pesquisa Econômica Aplicada(IPEA)e pelo Fórum Brasileiro de Segurança Púlica, dezenove municípios gaúchos estão entre os mais violentos do país. A cidade de Bagé aparece em 263º de 309 municípios, com o percentual de 3,9 casos para cada 100 mil habitantes.</h5>
             <h3 class="page-header"><i class="fa fa-laptop"></i> Dados da criminalidade em Bagé e no RS</h3>
             
           </div>
@@ -64,11 +59,10 @@
           <div class="col-lg-9 col-md-12">
             <div class="panel panel-default">
               <div class="panel-heading">
-                <h2><i class="fa fa-flag-o red"></i><strong>Últimas ocorrências</strong></h2>
+                <h2><i class="fa fa-flag-o red"></i><strong>Últimas ocorrências registradas</strong></h2>
                 <div class="panel-actions">
-                  <a href="index.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
-                  <a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-                  <a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+                  <a href="Index.jsp" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
+                  
                 </div>
               </div>
               <div class="panel-body">
@@ -82,7 +76,8 @@
                     </tr>
                   </thead>
                   <tbody>
-                      <%for (Ocorrencia item: lista)
+                      <%
+                          for (Ocorrencia item : lista)
                       {
                          // Date data = item.getOdata();
                           //data = StormData.formata(data);

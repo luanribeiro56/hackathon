@@ -106,16 +106,16 @@ public abstract class GenericDAO<T, I extends Serializable> {
    }
    
    public List<T> listarbo(String filtro) throws Exception{
-        return em.createNamedQuery(persistedClass.getSimpleName()+".findFilter").setParameter("filtro","%" + filtro.toUpperCase() + "%").getResultList();
+        return em.createNamedQuery(persistedClass.getSimpleName()+".findFilterByBO").setParameter("txtFiltro","%" + filtro.toUpperCase() + "%").getResultList();
     }
    public List<T> listarnatureza(String filtro) throws Exception{
-        return em.createNamedQuery(persistedClass.getSimpleName()+".findFilter").setParameter("filtro","%" + filtro.toUpperCase() + "%").getResultList();
+        return em.createNamedQuery(persistedClass.getSimpleName()+".findFilterByNatureza").setParameter("txtFiltro","%" + filtro.toUpperCase() + "%").getResultList();
     }
    public List<T> listarbairro(String filtro) throws Exception{
-        return em.createNamedQuery(persistedClass.getSimpleName()+".findFilter").setParameter("filtro","%" + filtro.toUpperCase() + "%").getResultList();
+        return em.createNamedQuery(persistedClass.getSimpleName()+".findFilterByBairro").setParameter("txtFiltro","%" + filtro.toUpperCase() + "%").getResultList();
     }
    public List<T> listardata(String filtro) throws Exception{
-        return em.createNamedQuery(persistedClass.getSimpleName()+".findFilter").setParameter("filtro","%" + filtro.toUpperCase() + "%").getResultList();
+        return em.createNamedQuery(persistedClass.getSimpleName()+".findFilterByData").setParameter("txtFiltro","%" + filtro.toUpperCase() + "%").getResultList();
     }
 
    public T buscarPorChavePrimaria(I chaveprimaria) {

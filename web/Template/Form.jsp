@@ -9,8 +9,18 @@
     String classe = "";
     if (request.getParameter("txtNatureza") != null && request.getParameter("txtBO") != null && request.getParameter("txtViolencia") != null && request.getParameter("txtTurno") != null && request.getParameter("txtBairro") != null && request.getParameter("txtData") != null) {
         oc.setOnatureza(request.getParameter("txtNatureza"));
-        oc.setOarma(Boolean.parseBoolean(request.getParameter("txtArma")));
-        oc.setOviolencia(Boolean.parseBoolean(request.getParameter("txtViolencia")));
+        if (request.getParameter("txtViolencia").equalsIgnoreCase("true")) {
+                oc.setOviolencia(true);
+            }
+        else if (request.getParameter("txtViolencia").equalsIgnoreCase("false")) {
+                oc.setOviolencia(false);
+            }
+        else if (request.getParameter("txtArma").equalsIgnoreCase("true")) {
+                oc.setOarma(true);
+            }
+        else if (request.getParameter("txtArma").equalsIgnoreCase("false")) {
+                oc.setOarma(false);
+            }
         oc.setObairro(request.getParameter("txtBairro"));
         oc.setObo(Long.parseLong(request.getParameter("txtBO")));
         oc.setOturno(request.getParameter("txtTurno"));
@@ -41,7 +51,7 @@
                     </header>
                     <div class="panel-body">
                         <div class="form">
-                            <form class="form-horizontal" method="post" action="">
+                            <form class="form-horizontal" method="post" action="#">
 
 
                                 <div class="form-group ">
@@ -163,8 +173,8 @@
                                     <div class="col-lg-10">
                                         <select class="form-control"  name="txtViolencia" type="text" required />
                                         <option name="violencia" value="">Selecione se houve ou não violência</option>   
-                                        <option name="violencia" value="1">Sim</option>
-                                        <option name="violencia" value="0">Não</option>
+                                        <option name="violencia" value="true">Sim</option>
+                                        <option name="violencia" value="false">Não</option>
                                         </select>
                                     </div>
                                 </div>
@@ -183,7 +193,7 @@
 
                                 <div class="form-group">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-primary" type="submit" >Salvar ocorrência</button>
+                                        <button class="btn btn-primary" type="submit" href="Index.jsp" >Salvar ocorrência</button>
                                         
                                         <button class="btn btn-default" type="button" href="Index.jsp">Cancelar</button>
                                     </div>

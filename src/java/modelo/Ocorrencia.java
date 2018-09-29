@@ -25,10 +25,10 @@ import javax.persistence.TemporalType;
 @Table(name = "ocorrencia")
 @NamedQueries({
     @NamedQuery(name = "Ocorrencia.findAll", query = "SELECT o FROM Ocorrencia o"),
-    @NamedQuery(name = "Ocorrencia.findByData", query = "SELECT o FROM Ocorrencia o WHERE o.odata = :odata"),
-    @NamedQuery(name = "Ocorrencia.findByBairro", query = "SELECT o FROM Ocorrencia o WHERE o.obairro = :obairro"),
-    @NamedQuery(name = "Ocorrencia.findByBO", query = "SELECT o FROM Ocorrencia o WHERE o.obo = :obo"),
-    @NamedQuery(name = "Ocorrencia.findByNatureza", query = "SELECT o FROM Ocorrencia o WHERE o.onatureza = :onatureza")
+    @NamedQuery(name = "Ocorrencia.findFilterByData", query = "SELECT o FROM Ocorrencia o WHERE o.odata = :odata"),
+    @NamedQuery(name = "Ocorrencia.findFilterByBairro", query = "SELECT o FROM Ocorrencia o WHERE o.obairro = :obairro"),
+    @NamedQuery(name = "Ocorrencia.findFilterByBO", query = "SELECT o FROM Ocorrencia o WHERE o.obo = :obo"),
+    @NamedQuery(name = "Ocorrencia.findFilterByNatureza", query = "SELECT o FROM Ocorrencia o WHERE o.onatureza = :onatureza")
 })
 public class Ocorrencia implements Serializable {
 

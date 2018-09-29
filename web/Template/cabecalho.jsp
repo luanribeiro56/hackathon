@@ -9,7 +9,7 @@
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <title>Creative - Bootstrap Admin Template</title>
+  <title>Mapa da Violência</title>
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -49,11 +49,11 @@
 
     <header class="header dark-bg">
       <div class="toggle-nav">
-        <div class="icon-reorder tooltips" data-original-title="Toggle Navigation" data-placement="bottom"><i class="icon_menu"></i></div>
+        <i class="icon_menu"></i>
       </div>
 
       <!--logo start-->
-      <a href="index.html" class="logo">Mapa da <span class="lite">Violência</span></a>
+      <a href="Index.jsp" class="logo">Mapa da <span class="lite">Violência</span></a>
       <!--logo end-->
 
    
@@ -84,7 +84,7 @@
                       </a>
           </li>
           <li class="sub-menu">
-            <a href="javascript:;" class="">
+            <a href="Pesquisar.jsp" class="">
                           <i class="icon_desktop"></i>
                           <span>Pesquisar</span>
                           
@@ -92,18 +92,10 @@
             
           </li>
           <li>
-            <a class="" href="widgets.html">
-                          <i class="icon_genius"></i>
+            <a class="" href="Index.jsp">
+                          
                           <span>Mapa</span>
                       </a>
-          </li>
-          <li>
-            <a class="" href="chart-chartjs.html">
-                          <i class="icon_piechart"></i>
-                          <span>Gráficos</span>
-
-                      </a>
-
           </li>
        </ul>
       </div>
